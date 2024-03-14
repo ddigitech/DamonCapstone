@@ -14,6 +14,8 @@ urlpatterns = [
      
      path(route ='logout/', view=views.logout_request, name='logout'),
 
+     path(route ='signup/', view = views.registration_request, name='registration'),
+
     # path for dealer reviews view
 
     # path for add a review view
