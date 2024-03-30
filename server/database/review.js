@@ -1,8 +1,7 @@
 /* eslint-disable */
 /* eslint-env es6 */
 
-// Your JavaScript code here
-const myVariable = 'Hello, world!';
+
 
 
 
