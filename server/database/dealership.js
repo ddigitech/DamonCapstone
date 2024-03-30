@@ -1,5 +1,4 @@
 
-/* eslint-disable */
 /* eslint-env es6 */
 
 
