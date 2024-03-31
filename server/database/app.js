@@ -1,5 +1,4 @@
-/* eslint-disable */
-/* eslint-env 'esversion: 6' */
+/*jshint esversion: 8 */
 
 
 const express = require('express');
