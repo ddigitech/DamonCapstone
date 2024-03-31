@@ -1,5 +1,4 @@
 /*jshint esversion: 8 */
-/* eslint-env es6 */
 
 
 
