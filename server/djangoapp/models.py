@@ -16,7 +16,7 @@ class CarMake(models.Model):
         return self.name
 
 
- ###Damon
+
 
 class CarModel(models.Model):
     car_make = models.ForeignKey(CarMake, null=True, on_delete=models.CASCADE)
