@@ -16,9 +16,6 @@ class CarMake(models.Model):
     def __str__(self):
         return self.name
 
-
-
-
 class CarModel(models.Model):
     car_make = models.ForeignKey(CarMake, null=True, on_delete=models.CASCADE)
     name = models.CharField(null=False, max_length=50)
