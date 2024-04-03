@@ -7,6 +7,7 @@ from django.db import models
 
 # Create your models here.
 
+
 # Car Make model
 class CarMake(models.Model):
     name = models.CharField(null=False, max_length=50)
