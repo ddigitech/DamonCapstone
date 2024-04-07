@@ -4,6 +4,28 @@ import "../assets/style.css";
 import Header from '../Header/Header';
 import review_icon from "../assets/reviewicon.png"
 
+
+
+const handleInputChange = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+    const filtered = originalDealers.filter(dealer =>
+      dealer.state.toLowerCase().includes(query.toLowerCase())
+    );
+    setDealersList(filtered);
+    };
+
+    const handleLostFocus = () => {
+        if (!searchQuery) {
+          setDealersList(originalDealers);
+        }
+        }
+
+
+  const [searchQuery, setSearchQuery] = useState('');
+  
+  const [originalDealers, setOriginalDealers] = useState([]);
+
 const Dealers = () => {
   const [dealersList, setDealersList] = useState([]);
   // let [state, setState] = useState("")
@@ -30,6 +52,7 @@ const Dealers = () => {
     const res = await fetch(dealer_url, {
       method: "GET"
     });
+    setOriginalDealers(all_dealers);
     const retobj = await res.json();
     if(retobj.status === 200) {
       let all_dealers = Array.from(retobj.dealers)
@@ -60,13 +83,7 @@ return(
       <th>Address</th>
       <th>Zip</th>
       <th>
-      <select name="state" id="state" onChange={(e) => filterDealers(e.target.value)}>
-      <option value="" selected disabled hidden>State</option>
-      <option value="All">All States</option>
-      {states.map(state => (
-          <option value={state}>{state}</option>
-      ))}
-      </select>        
+      <input type="text" placeholder="Search states..." onChange={handleInputChange} onBlur={handleLostFocus} value={searchQuery} />     
 
       </th>
       {isLoggedIn ? (
