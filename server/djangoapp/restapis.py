@@ -59,7 +59,7 @@ def post_review(data_dict):
     except:
         print("Network exception occurred")
 
- def searchcars_request(endpoint, **kwargs):
+def searchcars_request(endpoint, **kwargs):
     params = ""
     if (kwargs):
         for key, value in kwargs.items():
