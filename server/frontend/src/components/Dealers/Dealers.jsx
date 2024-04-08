@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import review_icon from "../assets/reviewicon.png"
 
 
+<a href={`/searchcars/${id}`}>SearchCars</a>	
 
 const handleInputChange = (event) => {
     const query = event.target.value;
